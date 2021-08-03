@@ -1,0 +1,28 @@
+{
+  "name": "knowledge-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-build": "webpack --config webpack.config.js",
+    "build-dev": "node ./node-utils/dev-build.js",
+    "compile": "npx tsc --project ./",
+    "dev-start": "nodemon ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.4.10",
+    "node-sass": "^6.0.1",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.2.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
