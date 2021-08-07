@@ -1,5 +1,6 @@
 @import './components/common.scss';
 @import './components/variables.scss';
+@import './components/nav.scss';
 
 .hero {
   &__container {
@@ -45,28 +46,25 @@
   overflow: hidden;
   text-align: center;
   margin-top: 8rem;
-}
 
-.kb-tab-container button {
-  background: inherit;
-  outline: none;
-  border: none;
-  border-radius: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 1rem;
-  text-align: center;
-  transition: .3s all ease;
-  /* color: #fff; */
-}
+  & button {
+    background: inherit;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+    text-align: center;
+    transition: .3s all ease;
 
-.kb-tab-container button[tab-open="true"] {
-  /* background: var(--primary-color); */
-  color: var(--primary-color);
-  font-weight: bold;
-  font-size: 1.2rem;
+    &[tab-open="true"] {
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
 }
-
 
 .kb-line {
   margin: 1rem;
@@ -77,83 +75,88 @@
 .kb-tags {
   display: flex;
   overflow: hidden;
-}
 
-.kb-tags .kb-tag-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+  & .kb-tag-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
-.kb-tag-card:hover {
-  /* background-color: var(--primary-color); */
-  background-color: #81b8f3;
-  transition: .3s all ease;
-}
+    &:hover {
+      background-color: #81b8f3;
+      transition: .3s all ease;
+    } 
+    font-size: 2rem;
+    margin: 1rem ;
+    border-radius: 10px;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 
-
-.kb-tags .kb-tag-card {
-  font-size: 2rem;
-  margin: 1rem ;
-  border-radius: 10px;
-  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+    
+  }
 }
 
 
-.kb-tag-card .kb-tabCard-icon {
-  background-color: #F3F6F9;
-  padding: 1rem;
-  height: 100%;
-}
-.kb-tag-card .kb-tabCard-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+.kb-tag-card {
+  & .kb-tabCard-icon {
+    background-color: #F3F6F9;
+    padding: 1rem;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  & h5 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
 }
 
-.kb-tag-card h5 {
-  text-align: center;
-  font-size: 1rem;
-  padding: 1rem;
-}
-.kb-tag-container .kb-tag-header {
-  color: var(--primary-color);
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 1rem;
-}
+.kb-tag-container {
+  & .kb-tag-header {
+    color: $primary-color;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+  }
+} 
+
+
 .kb-card-container {
-  margin-top: 4rem;
-}
+  margin-top: 4rem; 
 
-.kb-card-container .kb-card {
-  /* border: 2px solid black; */
-  /* box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19); */
-  box-shadow: 0 15px 20px rgba(0,0,0,.05), 0 0 5px rgba(0,0,0,.1);
-  padding: 1rem;
-  width: 15rem;
-  border-radius: 10px;
-  margin: 1rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .3s all ease-out;
+  & .kb-card {
+    box-shadow: 0 15px 20px rgba(0,0,0,.05), 0 0 5px rgba(0,0,0,.1);
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 10px;
+    margin: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s all ease-out;
 
-}
-.kb-card-container .kb-card:hover {
-  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    &:hover {
+      box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    }
+    &:active {
+      top: 50%;
+      box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 2px rgba(0,0,0,.1);
+      transition: ease-in-out .1s;
+    }
 
-}
+    & header {
+      text-align:center;
+    }
+    & .kb-card-footer {
+      text-align: end;
+    }
+  }
 
-.kb-card-container .kb-card:active {
-  top: 50%;
-  box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 2px rgba(0,0,0,.1);
-  transition: ease-in-out .1s;
-}
 
-.kb-card-container .kb-card header {
-  text-align:center;
-}
-.kb-card-container .kb-card .kb-card-footer {
-  text-align: end;
 }

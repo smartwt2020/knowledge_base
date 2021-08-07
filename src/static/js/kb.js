@@ -1,1 +1,2 @@
-import './component/tab'
+import './components/tab';
+import './components/nav';
