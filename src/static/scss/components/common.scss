@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif ;
 }
 
 
@@ -23,7 +24,7 @@
 
 
 section {
-  margin: 1rem 5rem;
+  margin: 5rem 5rem;
 }
 
 .bd-grid {
@@ -35,6 +36,8 @@ section {
 
 
 .button {
+  margin-top: 1rem;
+
   text-align: center;
   text-decoration: none;
   font-family: $body-font;
@@ -45,11 +48,8 @@ section {
   color: #fff;
 
   transition: .3s all ease;
-}
-.button:hover {
-  background-color: $primary-color-light;
-}
 
-.button {
-  margin-top: 1rem;
+  &:hover {
+    background-color: $primary-color-light;
+  }
 }
