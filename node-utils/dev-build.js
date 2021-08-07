@@ -59,6 +59,7 @@ function copyFolderRecursiveSync(source, target) {
 
 const viewBuild = function () {
   copyFolderRecursiveSync(config.viewsSrcFolder, config.viewsTargetFolder)
+  copyFolderRecursiveSync(config.assetsSrc, config.assetsTarget)
   const tsBuild = spawn('npm', ['run', 'compile'])
   WebpackBuild.stdout.on('data', (data) => {
     console.log(`[Webpack build]: ${data}`)
